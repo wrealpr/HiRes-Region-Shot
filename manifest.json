@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "HiRes Region Shot",
+  "version": "1.0",
+  "description": "Select a region of a page and capture it re-rendered at 2x to 16x scale (4K, 8K and beyond).",
+  "permissions": ["activeTab", "scripting", "debugger", "downloads", "storage"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "HiRes Region Shot" },
+  "commands": {
+    "_execute_action": { "suggested_key": { "default": "Alt+Shift+S" } }
+  }
+}

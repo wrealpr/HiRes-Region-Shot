@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body{font:13px system-ui,sans-serif;width:260px;margin:12px}
+  label{display:block;margin:8px 0 3px;font-weight:600}
+  select,button{width:100%;padding:6px;font-size:13px}
+  button{margin-top:12px;padding:9px;cursor:pointer}
+  small{color:#666;display:block;margin-top:8px;line-height:1.4}
+</style>
+<label for="preset">Output resolution</label>
+<select id="preset">
+  <option value="scale:2">2x scale</option>
+  <option value="scale:4">4x scale</option>
+  <option value="scale:8">8x scale</option>
+  <option value="scale:16">16x scale</option>
+  <option value="width:3840">Width = 3840px (4K)</option>
+  <option value="width:7680">Width = 7680px (8K)</option>
+  <option value="width:15360">Width = 15360px (16K)</option>
+</select>
+<label for="format">Format</label>
+<select id="format">
+  <option value="png">PNG (lossless)</option>
+  <option value="jpeg">JPEG (smaller)</option>
+</select>
+<button id="go">Select region</button>
+<small>Drag on the page to select. Esc cancels. Output is capped at 16384px per side (Chrome's GPU limit).</small>
+<script src="popup.js"></script>
